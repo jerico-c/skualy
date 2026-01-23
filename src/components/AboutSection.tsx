@@ -78,7 +78,8 @@ export const AboutSection = () => {
               <div className="pt-8 border-t border-border/50">
                 <p className="caption text-muted-foreground mb-2">Jam Operasional</p>
                 <p className="font-serif text-lg text-foreground">
-                  Setiap Hari · 08:00 – 21:00
+                  Senin - Minggu · 08:00 - 17:00
+                  (Jumat Tutup)
                 </p>
               </div>
             </div>

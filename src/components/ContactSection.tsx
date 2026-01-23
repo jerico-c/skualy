@@ -12,20 +12,20 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: 'Telepon',
-    value: '+62 812 3456 7890',
+    label: 'Reservasi',
+    value: '+62 815-4251-3554',
     detail: 'WhatsApp tersedia',
   },
   {
     icon: Clock,
     label: 'Jam Buka',
-    value: 'Setiap Hari',
-    detail: '08:00 – 21:00 WIB',
+    value: 'Senin - Minggu (Jumat Tutup)',
+    detail: '08:00 – 17:00 WIB',
   },
   {
     icon: Instagram,
     label: 'Instagram',
-    value: '@skualy.id',
+    value: '@skualy_gambasan',
     detail: 'Ikuti kami',
   },
 ];
