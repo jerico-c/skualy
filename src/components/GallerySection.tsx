@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import heroImage from '@/assets/hero-skualy.jpg';
 import aboutImage from '@/assets/about-skualy.jpg';
 import foodImage from '@/assets/food-1.jpg';
 import coffeeImage from '@/assets/coffee-1.jpg';
 import villageImage from '@/assets/village-view.jpg';
+import fotbarImage from '@/assets/fotbar.jpg';
+import gazeboImage from '@/assets/gazebo.jpg';
+import kolamrenangImage from '@/assets/kolamrenang.jpg';
+import skualyFrontImage from '@/assets/skualy_front.jpg';
 
 const galleryImages = [
   { src: heroImage, alt: 'Skualy dari luar dengan pemandangan sawah', span: 'col-span-2 row-span-2' },
@@ -13,11 +18,18 @@ const galleryImages = [
   { src: foodImage, alt: 'Hidangan khas', span: 'col-span-1 row-span-1' },
   { src: villageImage, alt: 'Pemandangan desa Gambasan', span: 'col-span-2 row-span-1' },
   { src: aboutImage, alt: 'Interior Skualy', span: 'col-span-1 row-span-1' },
+  { src: skualyFrontImage, alt: 'Tampak depan Skualy', span: 'col-span-1 row-span-1' },
+  { src: kolamrenangImage, alt: 'Kolam renang Skualy', span: 'col-span-2 row-span-1' },
+  { src: gazeboImage, alt: 'Gazebo di Skualy', span: 'col-span-1 row-span-1' },
+  { src: fotbarImage, alt: 'Spot foto bar Skualy', span: 'col-span-1 row-span-1' },
 ];
 
 export const GallerySection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const [showAll, setShowAll] = useState(false);
+  
+  const visibleImages = showAll ? galleryImages : galleryImages.slice(0, 5);
 
   return (
     <section
@@ -44,7 +56,7 @@ export const GallerySection = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {galleryImages.map((image, index) => (
+          {visibleImages.map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -67,6 +79,31 @@ export const GallerySection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Show More/Less Button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-12"
+        >
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-2 px-6 py-3 border border-primary/20 rounded-sm text-sm tracking-wider uppercase text-foreground hover:bg-primary/5 transition-colors duration-300"
+          >
+            {showAll ? (
+              <>
+                <ChevronUp size={20} strokeWidth={1.5} />
+                Tampilkan Lebih Sedikit
+              </>
+            ) : (
+              <>
+                <ChevronDown size={20} strokeWidth={1.5} />
+                Lihat Semua Foto
+              </>
+            )}
+          </button>
+        </motion.div>
       </div>
     </section>
   );

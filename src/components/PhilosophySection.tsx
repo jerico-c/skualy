@@ -39,10 +39,11 @@ export const PhilosophySection = () => {
             <p className="caption text-primary-foreground/70 mb-6">Filosofi Kami</p>
             
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-light leading-relaxed mb-8">
-              "Dari tanah yang sama tempat nenek moyang kami 
-              <span className="italic"> menanam harapan</span>, 
-              kami menyajikan cita rasa yang 
-              <span className="italic"> menghubungkan generasi</span>."
+              "Sebuah 
+              <span className="italic"> oase kesegaran </span> 
+              di tengah kehangatan desa, tempat  
+              <span className="italic"> alam dan keluarga </span> 
+              bersatu dalam harmoni."
             </h2>
 
             <div className="flex items-center justify-center space-x-4">

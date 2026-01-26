@@ -23,9 +23,9 @@ export const AboutSection = () => {
         >
           <p className="caption mb-4 text-primary">Tentang Kami</p>
           <h2 className="headline-section text-foreground mb-8">
-            Sebuah Pelarian ke
+            Pesona Kesegaran Alami di
             <br />
-            <span className="text-gradient-warm">Keindahan Alam</span>
+            <span className="text-gradient-warm">Jantung Desa</span>
           </h2>
         </motion.div>
 
@@ -58,28 +58,28 @@ export const AboutSection = () => {
           >
             <div className="space-y-6">
               <p className="body-large text-foreground/90 leading-relaxed">
-                Tersembunyi di lereng hijau Gambasan, Skualy adalah tempat di mana 
-                waktu berjalan lebih lambat dan setiap momen menjadi kenangan.
+                Bosan dengan hiruk-pikuk perkotaan? Wisata Skualy di Desa Gambasan hadir 
+                sebagai oase bagi Anda yang merindukan ketenangan dan kemurnian alam.
               </p>
               
               <p className="body-default text-muted-foreground leading-relaxed">
-                Kami percaya bahwa makanan terbaik datang dari bahan-bahan segar 
-                yang dipetik langsung dari alam sekitar. Di sini, tradisi kuliner 
-                Jawa bertemu dengan sentuhan modern, menciptakan pengalaman 
-                bersantap yang tak terlupakan.
+                Nikmati sensasi berenang di kolam dengan air yang bersumber langsung dari 
+                mata air pegunungan. Tanpa kaporit, sangat jernih, dan memberikan kesegaran 
+                instan bagi tubuh dan pikiran. Dikelilingi rimbunnya pepohonan dan udara 
+                yang bebas polusi.
               </p>
 
               <p className="body-default text-muted-foreground leading-relaxed">
-                Setiap hidangan adalah cerita — tentang petani lokal yang merawat 
-                tanahnya dengan cinta, tentang resep turun-temurun yang dijaga 
-                dengan hormat, dan tentang keindahan sederhana kehidupan desa.
+                Skualy bukan hanya sekadar tempat rekreasi. Destinasi ini dikelola dengan 
+                semangat pemberdayaan masyarakat Desa Gambasan. Setiap kunjungan Anda 
+                berkontribusi langsung pada penguatan ekonomi warga lokal dan pelestarian 
+                lingkungan desa.
               </p>
 
               <div className="pt-8 border-t border-border/50">
-                <p className="caption text-muted-foreground mb-2">Jam Operasional</p>
-                <p className="font-serif text-lg text-foreground">
-                  Senin - Minggu · 08:00 - 17:00
-                  (Jumat Tutup)
+                <p className="caption text-muted-foreground mb-2">Fasilitas</p>
+                <p className="text-muted-foreground">
+                  Pemandian Anak · Gardu Pandang · Gazebo · Aula · Spot Foto View Tujuh Gunung · Cafe & Resto
                 </p>
               </div>
             </div>
