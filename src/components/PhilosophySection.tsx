@@ -25,7 +25,7 @@ export const PhilosophySection = () => {
             alt="Pemandangan desa Gambasan saat matahari terbit"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/20 to-foreground/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/50 to-foreground/70" />
         </motion.div>
 
         {/* Content overlay */}

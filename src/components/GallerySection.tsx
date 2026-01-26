@@ -11,6 +11,9 @@ import fotbarImage from '@/assets/fotbar.jpg';
 import gazeboImage from '@/assets/gazebo.jpg';
 import kolamrenangImage from '@/assets/kolamrenang.jpg';
 import skualyFrontImage from '@/assets/skualy_front.jpg';
+import esjerukImage from '@/assets/esjeruk.jpeg';
+import jamurImage from '@/assets/jamur.jpeg';
+import prasmananImage from '@/assets/prasmanan.jpeg';
 
 const galleryImages = [
   { src: heroImage, alt: 'Skualy dari luar dengan pemandangan sawah', span: 'col-span-2 row-span-2' },
@@ -22,6 +25,9 @@ const galleryImages = [
   { src: kolamrenangImage, alt: 'Kolam renang Skualy', span: 'col-span-2 row-span-1' },
   { src: gazeboImage, alt: 'Gazebo di Skualy', span: 'col-span-1 row-span-1' },
   { src: fotbarImage, alt: 'Spot foto bar Skualy', span: 'col-span-1 row-span-1' },
+  { src: esjerukImage, alt: 'Es jeruk segar', span: 'col-span-1 row-span-1' },
+  { src: jamurImage, alt: 'Jamur goreng', span: 'col-span-1 row-span-1' },
+  { src: prasmananImage, alt: 'Menu prasmanan Skualy', span: 'col-span-2 row-span-1' },
 ];
 
 export const GallerySection = () => {
@@ -29,7 +35,7 @@ export const GallerySection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
   const [showAll, setShowAll] = useState(false);
   
-  const visibleImages = showAll ? galleryImages : galleryImages.slice(0, 5);
+  const visibleImages = showAll ? galleryImages : galleryImages.slice(0, 6);
 
   return (
     <section

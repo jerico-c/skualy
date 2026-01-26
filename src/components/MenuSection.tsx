@@ -2,6 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import mixPlatterImg from '@/assets/mixplatter.png';
+import mendoanImg from '@/assets/mendoan.png';
+import nilabakarImg from '@/assets/nilabakar.png';
+import ayambakarImg from '@/assets/ayambakar.png';
 
 // Menu Data Structure
 const menuData = {
@@ -102,9 +106,49 @@ export const MenuSection = () => {
     <section
       id="menu"
       ref={sectionRef}
-      className="section-container bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-yellow-50/30"
+      className="section-container bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-yellow-50/30 relative overflow-hidden"
     >
-      <div className="container mx-auto px-6 md:px-12">
+      {/* Decorative Background Images */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Nila Bakar - Kiri Atas */}
+        <motion.img
+          initial={{ opacity: 0, x: -100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          src={nilabakarImg}
+          alt=""
+          className="absolute top-8 left-0 w-24 h-24 md:w-48 md:h-48 object-contain rotate-[-15deg]"
+        />
+        {/* Mix Platter - Kanan Atas */}
+        <motion.img
+          initial={{ opacity: 0, x: 100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          src={mixPlatterImg}
+          alt=""
+          className="absolute top-10 right-0 w-20 h-20 md:w-52 md:h-52 object-contain rotate-[12deg]"
+        />
+        {/* Mendoan - Kiri Bawah */}
+        <motion.img
+          initial={{ opacity: 0, y: 100 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.7 }}
+          src={mendoanImg}
+          alt=""
+          className="absolute bottom-0 left-0 w-24 h-24 md:w-48 md:h-48 object-contain rotate-[18deg]"
+        />
+        {/* Ayam Bakar - Kanan Bawah */}
+        <motion.img
+          initial={{ opacity: 0, y: 100 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.9 }}
+          src={ayambakarImg}
+          alt=""
+          className="absolute bottom-0 right-0 w-24 h-24 md:w-48 md:h-48 object-contain rotate-[-20deg]"
+        />
+      </div>
+      
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
