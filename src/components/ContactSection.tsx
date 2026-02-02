@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Reservasi',
-    value: '+62 815-4251-3554',
+    value: '+62 85196204549',
     detail: 'WhatsApp tersedia',
   },
   {
